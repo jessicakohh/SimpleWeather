@@ -60,14 +60,38 @@
 			children = (
 				C8E359AB28EEB076008091D6 /* AppDelegate.swift */,
 				C8E359AD28EEB076008091D6 /* SceneDelegate.swift */,
-				C8E359AF28EEB076008091D6 /* ViewController.swift */,
-				C8E359B128EEB076008091D6 /* Main.storyboard */,
+				C8E359C428EEB0FE008091D6 /* Models */,
+				C8E359C328EEB0F8008091D6 /* Views */,
+				C8E359C228EEB0F1008091D6 /* Controllers */,
 				C8E359B728EEB077008091D6 /* Assets.xcassets */,
-				C8E359B928EEB077008091D6 /* LaunchScreen.storyboard */,
 				C8E359BC28EEB077008091D6 /* Info.plist */,
 				C8E359B428EEB076008091D6 /* SimpleWeather2.xcdatamodeld */,
 			);
 			path = SimpleWeather2;
+			sourceTree = "<group>";
+		};
+		C8E359C228EEB0F1008091D6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C8E359AF28EEB076008091D6 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C8E359C328EEB0F8008091D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8E359B928EEB077008091D6 /* LaunchScreen.storyboard */,
+				C8E359B128EEB076008091D6 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C8E359C428EEB0FE008091D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +323,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +331,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jessicaKoh.SimpleWeather2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -327,6 +355,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,9 +363,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jessicaKoh.SimpleWeather2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
