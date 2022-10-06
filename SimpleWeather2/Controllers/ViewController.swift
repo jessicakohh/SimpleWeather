@@ -11,6 +11,15 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var conditionImageView: UIImageView!
+    @IBOutlet weak var tempLabel: UIStackView!
+    @IBOutlet weak var weatherDescriptionLabel: UILabel!
+    @IBOutlet weak var bottonStackView: UIStackView!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var maxTempLabel: UILabel!
+    @IBOutlet weak var minTempLabel: UILabel!
+    
     var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
