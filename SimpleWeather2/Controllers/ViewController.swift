@@ -17,12 +17,9 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
     @IBOutlet weak var searchTextField: UITextField!
     
     @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var humidityLabel: UILabel!
-    
-    
-    
-    
+    @IBOutlet weak var maxTempLabel: UILabel!
+    @IBOutlet weak var minTempLabel: UILabel!
     
     
     
@@ -75,6 +72,11 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
             self.temperatureLabel.text = weather.temperatureString
             self.conditionImageView.image = UIImage(systemName: weather.conditionName)
             self.cityLabel.text = weather.cityName
+            self.descriptionLabel.text = weather.weatherDescription
+            self.humidityLabel.text = weather.humidityString
+            self.maxTempLabel.text = weather.maxTempString
+            self.minTempLabel.text = weather.minTempString
+            
         }
     }
     
