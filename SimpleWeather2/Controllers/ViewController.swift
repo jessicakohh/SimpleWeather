@@ -25,8 +25,6 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
     
     
-    //    var locationManager: CLLocationManager!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,10 +37,7 @@ class ViewController: UIViewController {
         locationManager.requestLocation()
         
     }
-    
-    @IBAction func locationPressed(_ sender: UIButton) {
-        locationManager.requestLocation()
-    }
+
     
     
     
@@ -111,6 +106,11 @@ extension ViewController: WeatherManagerDelegate {
 
 
 extension ViewController: CLLocationManagerDelegate {
+    
+    
+    @IBAction func locationPressed(_ sender: UIButton) {
+        locationManager.requestLocation()
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {

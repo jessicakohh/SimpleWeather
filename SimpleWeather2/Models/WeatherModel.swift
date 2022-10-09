@@ -21,15 +21,15 @@ struct WeatherModel {
     }
     
     var maxTempString: String {
-        return String(format: "%.1f", maxTemp)
+        return String(format: "%.0f", maxTemp)
     }
     
     var minTempString: String {
-        return String(format: "%.1f", minTemp)
+        return String(format: "%.0f", minTemp)
     }
     
     var humidityString: String {
-        return String(format: "%.1f", humidity)
+        return String(format: "%.0f", humidity)
     }
 
     var conditionName: String {
