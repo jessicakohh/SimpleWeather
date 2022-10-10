@@ -35,13 +35,7 @@ class ViewController: UIViewController {
         // 사용자에게 위치 권한 요청 팝업
         locationManager.requestAlwaysAuthorization()
         locationManager.requestLocation()
-        
     }
-
-    
-    
-    
-    
 }
 
 

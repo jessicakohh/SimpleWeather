@@ -18,9 +18,6 @@
 		C8E359B628EEB076008091D6 /* SimpleWeather2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8E359B428EEB076008091D6 /* SimpleWeather2.xcdatamodeld */; };
 		C8E359B828EEB077008091D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8E359B728EEB077008091D6 /* Assets.xcassets */; };
 		C8E359BB28EEB077008091D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8E359B928EEB077008091D6 /* LaunchScreen.storyboard */; };
-		C8EABA8F28F2B5B100E7D4CB /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EABA8E28F2B5B100E7D4CB /* MenuItemCell.swift */; };
-		C8EABA9128F2B5C900E7D4CB /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EABA9028F2B5C900E7D4CB /* SideMenuController.swift */; };
-		C8EABA9328F2C57E00E7D4CB /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EABA9228F2C57E00E7D4CB /* MenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +35,6 @@
 		C8E359B728EEB077008091D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8E359BA28EEB077008091D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8E359BC28EEB077008091D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8EABA8E28F2B5B100E7D4CB /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
-		C8EABA9028F2B5C900E7D4CB /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
-		C8EABA9228F2C57E00E7D4CB /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		E0B5D2138672F5D619CB0D51 /* Pods-SimpleWeather2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleWeather2.release.xcconfig"; path = "Target Support Files/Pods-SimpleWeather2/Pods-SimpleWeather2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,8 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				C8E359AF28EEB076008091D6 /* ViewController.swift */,
-				C8EABA9028F2B5C900E7D4CB /* SideMenuController.swift */,
-				C8EABA9228F2C57E00E7D4CB /* MenuController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,7 +113,6 @@
 			children = (
 				C8E359B928EEB077008091D6 /* LaunchScreen.storyboard */,
 				C8E359B128EEB076008091D6 /* Main.storyboard */,
-				C8EABA8E28F2B5B100E7D4CB /* MenuItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,12 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8EABA9328F2C57E00E7D4CB /* MenuController.swift in Sources */,
 				C8E359B028EEB076008091D6 /* ViewController.swift in Sources */,
-				C8EABA8F28F2B5B100E7D4CB /* MenuItemCell.swift in Sources */,
 				C8DDAB8F28F13B9100055BAF /* WeatherData.swift in Sources */,
 				C8E359AC28EEB076008091D6 /* AppDelegate.swift in Sources */,
-				C8EABA9128F2B5C900E7D4CB /* SideMenuController.swift in Sources */,
 				C8BD7A4C28EF030E007AE7DD /* WeatherManager.swift in Sources */,
 				C8E359AE28EEB076008091D6 /* SceneDelegate.swift in Sources */,
 				C8DDAB9128F13BA400055BAF /* WeatherModel.swift in Sources */,
