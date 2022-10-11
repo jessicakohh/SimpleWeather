@@ -18,7 +18,7 @@ struct WeatherData: Codable {
 
 struct Main: Codable {
     // 내 속성 이름이 JSONData에서 보고 있는 속성의 이름과 일치하는지 확인해야 함
-    let temp: Double
+    let temp: Double?
     let temp_max: Double
     let temp_min: Double
     let humidity: Double

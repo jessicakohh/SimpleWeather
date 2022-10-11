@@ -9,9 +9,11 @@ import UIKit
 import CoreLocation
 
 
-class ViewController: UIViewController {
+final class WeatherViewController: UIViewController {
     
-    @IBOutlet weak var conditionImageView: UIImageView!
+    
+    @IBOutlet weak private var conditionImageView: UIImageView!
+    
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
@@ -27,21 +29,35 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        configure()
+    }
+    
+    private func configure() {
+        configureDelegate()
+        configureLocation()
+    }
+    
+    private func configureDelegate() {
         searchTextField.delegate = self
         weatherManager.delegate = self
         locationManager.delegate = self
-        
-        // 사용자에게 위치 권한 요청 팝업
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestLocation()
     }
+    
+    private func configureLocation() {
+        // 사용자에게 위치 권한 요청 팝업
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    
+    
 }
 
 
 // MARK: - UITextField
 
-extension ViewController: UITextFieldDelegate {
+extension WeatherViewController: UITextFieldDelegate {
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         searchTextField.endEditing(true)
@@ -73,10 +89,10 @@ extension ViewController: UITextFieldDelegate {
 
 // MARK: - WeatherManagerDelegate
 
-extension ViewController: WeatherManagerDelegate {
+extension WeatherViewController: WeatherManagerDelegate {
     
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
-        DispatchQueue.main.sync {
+        DispatchQueue.main.async {
             self.temperatureLabel.text = weather.temperatureString
             self.conditionImageView.image = UIImage(systemName: weather.conditionName)
             self.cityLabel.text = weather.cityName
@@ -99,12 +115,36 @@ extension ViewController: WeatherManagerDelegate {
 //MARK: - CLLocationManagerDelegate
 
 
-extension ViewController: CLLocationManagerDelegate {
+extension WeatherViewController: CLLocationManagerDelegate {
     
     
     @IBAction func locationPressed(_ sender: UIButton) {
-        locationManager.requestLocation()
-    }
+
+        switch locationManager.authorizationStatus {
+        case .denied:
+            let alert = UIAlertController(title: "", message: "현재위치를 사용하려면 시스템 설정에서 위치 권한을 변경하세요.", preferredStyle: .alert)
+            
+            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            let okButton = UIAlertAction(title: "확인", style: .default) { (action) in
+                guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                }
+            }
+            
+            alert.addAction(cancel)
+            alert.addAction(okButton)
+            
+            present(alert, animated: true, completion: nil)
+
+        case .notDetermined, .restricted, .authorizedAlways, .authorizedWhenInUse:
+            locationManager.requestLocation()
+        @unknown default:
+            break
+        }
+        
+           }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
@@ -118,5 +158,7 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
+    
+
 }
 
