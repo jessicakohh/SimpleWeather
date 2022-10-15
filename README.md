@@ -1,6 +1,6 @@
 # SimpleWeather
 
-Simple Weather 날씨 앱입니다.  
+Simple Weather 날씨 앱입니다.    
 제1회 iOS 1인 해커톤 - with 루나 at the 앨런 스쿨에 참가하였습니다.  
 대회 참가 기간: 2022년 10월 5일 ~ 2022년 10월 11일  
   
